@@ -8,7 +8,7 @@ func TestWallet(t *testing.T) {
 		t.Helper()
 		got := wallet.Balance()
 		if got != want {
-			t.Errorf("got %v want %v", got, want)
+			t.Errorf("got %s want %s", got, want)
 		}
 	}
 

@@ -1,7 +1,13 @@
 package wallet
 
+import "fmt"
+
 // Bitcoin type
 type Bitcoin int
+
+func (b Bitcoin) String() string {
+	return fmt.Sprintf("%d BTC", b)
+}
 
 // Wallet struct
 type Wallet struct {
