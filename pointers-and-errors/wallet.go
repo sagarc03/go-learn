@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// ErrInsufficientFunds is returned with there isnt enough balance in the wallet
 var ErrInsufficientFunds = errors.New("cannot withdraw, insufficient balance")
 
 // Bitcoin type
