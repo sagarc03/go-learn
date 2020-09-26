@@ -1,6 +1,9 @@
 package wallet
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 // Bitcoin type
 type Bitcoin int
@@ -25,6 +28,10 @@ func (w *Wallet) Balance() Bitcoin {
 }
 
 // Withdraw detucts the given amount from the balance
-func (w *Wallet) Withdraw(amount Bitcoin) {
+func (w *Wallet) Withdraw(amount Bitcoin) error {
+	if w.balance < amount {
+		return errors.New("Oh no!")
+	}
 	w.balance -= amount
+	return nil
 }
